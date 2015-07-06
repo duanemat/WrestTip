@@ -11,6 +11,8 @@ import android.widget.Toast;
 public class MainActivity extends Activity implements Button.OnClickListener {
 
     private TextView mTextView;
+    private String bill_string = "";
+    private Double bill_value = 0.00;
     private WatchViewStub stub;
 
     @Override
@@ -24,8 +26,6 @@ public class MainActivity extends Activity implements Button.OnClickListener {
                 mTextView = (TextView) stub.findViewById(R.id.text);
             }
         });
-
-
     }
 
     @Override
@@ -52,6 +52,28 @@ public class MainActivity extends Activity implements Button.OnClickListener {
     @Override
     public void onClick(View view) {
         Button btn = (Button)view;
-        Toast.makeText(this.getApplicationContext(), btn.getText(), Toast.LENGTH_SHORT).show();
+        try{
+            bill_string += (String)btn.getText();
+            mTextView.setText(formatCurrencyString(bill_string));
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * @param str - String to format
+     * @return string formatted to '$x.yz'
+     */
+    private String formatCurrencyString(String str){
+        Double val;
+        try {
+            val = Double.valueOf(str);
+            str = String.format("%.2f", val/100);
+        }catch(Exception e){
+            e.printStackTrace();
+            return "0.00";
+        }
+        return str;
     }
 }
