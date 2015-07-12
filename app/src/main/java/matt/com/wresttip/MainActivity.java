@@ -53,7 +53,15 @@ public class MainActivity extends Activity implements Button.OnClickListener {
     public void onClick(View view) {
         Button btn = (Button)view;
         try{
-            bill_string += (String)btn.getText();
+            if (btn.getId() == R.id.btnClear){
+                bill_string = "0.00";
+            }
+            else if (btn.getId() == R.id.btnBcksp){
+                bill_string = bill_string.substring(0, bill_string.length()-1);
+            }
+            else {
+                bill_string += (String) btn.getText();
+            }
             mTextView.setText(formatCurrencyString(bill_string));
         }
         catch(Exception e){
