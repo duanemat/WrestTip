@@ -23,7 +23,7 @@ public class MainActivity extends Activity implements Button.OnClickListener {
         stub.setOnLayoutInflatedListener(new WatchViewStub.OnLayoutInflatedListener() {
             @Override
             public void onLayoutInflated(WatchViewStub stub) {
-                mTextView = (TextView) stub.findViewById(R.id.text);
+                mTextView = (TextView) stub.findViewById(R.id.bill);
             }
         });
     }
@@ -54,7 +54,7 @@ public class MainActivity extends Activity implements Button.OnClickListener {
         Button btn = (Button)view;
         try{
             if (btn.getId() == R.id.btnClear){
-                bill_string = "0.00";
+                bill_string = "";
             }
             else if (btn.getId() == R.id.btnBcksp){
                 bill_string = bill_string.substring(0, bill_string.length()-1);
@@ -76,6 +76,8 @@ public class MainActivity extends Activity implements Button.OnClickListener {
     private String formatCurrencyString(String str){
         Double val;
         try {
+            if (str.length() == 0)
+                str = "0.00";
             val = Double.valueOf(str);
             str = String.format("%.2f", val/100);
         }catch(Exception e){

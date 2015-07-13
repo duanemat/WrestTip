@@ -15,4 +15,5 @@
     <string name="nine">9</string>
     <string name="clear">C</string>
     <string name="bcksp">\u003C</string>
+    <string name="compute">Compute</string>
 </resources>

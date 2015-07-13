@@ -3,7 +3,125 @@
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" tools:context=".MainActivity" tools:deviceIds="wear_round">
 
-    <TextView android:id="@+id/text" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true" android:text="@string/hello_round" />
+    <TextView android:id="@+id/text" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:text="@string/bill_ammount_value"
+        android:gravity="center_vertical|right"
+        android:textSize="20dp"
+        android:layout_marginBottom="10dp"/>
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rowCount="4"
+        android:columnCount="3"
+        android:useDefaultMargins="true"
+        android:id="@+id/number_grid">
+        <Button
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/round_button"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="#fff"
+            android:text="@string/one"
+            android:id="@+id/btnOne"
+            android:onClick="onClick" />
+        <Button
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/round_button"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="#fff"
+            android:text="@string/two"
+            android:id="@+id/btnTwo"
+            android:onClick="onClick" />
+        <Button
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/round_button"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="#fff"
+            android:text="@string/three"
+            android:id="@+id/btnThree"
+            android:onClick="onClick" />
+        <Button
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/round_button"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="#fff"
+            android:text="@string/four"
+            android:id="@+id/btnFour"
+            android:onClick="onClick" />
+        <Button
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/round_button"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="#fff"
+            android:text="@string/five"
+            android:id="@+id/btnFive"
+            android:onClick="onClick" />
+        <Button
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/round_button"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="#fff"
+            android:text="@string/six"
+            android:id="@+id/btnSix"
+            android:onClick="onClick" />
+        <Button
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/round_button"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="#fff"
+            android:text="@string/seven"
+            android:id="@+id/btnSeven"
+            android:onClick="onClick" />
+        <Button
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/round_button"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="#fff"
+            android:text="@string/eight"
+            android:id="@+id/btnEight"
+            android:onClick="onClick" />
+        <Button
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/round_button"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="#fff"
+            android:text="@string/nine"
+            android:id="@+id/btnNine"
+            android:onClick="onClick" />
+        <Button
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/round_button"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="#fff"
+            android:text="@string/clear"
+            android:id="@+id/btnClear"
+            android:onClick="onClick" />
+        <Button
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/round_button"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="#fff"
+            android:text="@string/zero"
+            android:id="@+id/btnZero"
+            android:onClick="onClick" />
+        <Button
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/round_button"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="#fff"
+            android:text="@string/bcksp"
+            android:id="@+id/btnBcksp"
+            android:onClick="onClick" />
+    </GridLayout>
 </RelativeLayout>
